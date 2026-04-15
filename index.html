@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjeev ❤️ Shivani</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* 🚪 Door */
+#doorScreen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 10;
+}
+
+.door {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(45deg, #3b0000, #000);
+  transition: 1.5s ease-in-out;
+}
+
+.left { border-right: 2px solid gold; }
+.right { border-left: 2px solid gold; }
+
+#openText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  color: gold;
+  font-size: 28px;
+  cursor: pointer;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Animation */
+.open .left { transform: translateX(-100%) rotateY(20deg); }
+.open .right { transform: translateX(100%) rotateY(-20deg); }
+
+/* 💑 Hero */
+#hero {
+  height: 100vh;
+  background: url('ss1.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  animation: fadeIn 3s ease;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  color: gold;
+  font-size: 36px;
+}
+
+/* Gallery */
+.gallery img {
+  width: 90%;
+  max-width: 400px;
+  margin: 15px;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Button */
+.btn {
+  background: gold;
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🚪 Door -->
+<div id="doorScreen">
+  <div class="door left"></div>
+  <div class="door right"></div>
+
+  <div id="openText" onclick="openDoor()">
+    🕉️ Om Ganeshaya Namaha <br><br>
+    Click to Open Invitation
+  </div>
+</div>
+
+<!-- 💑 Hero -->
+<section id="hero">
+  <h1>Sanjeev ❤️ Shivani</h1>
+</section>
+
+<!-- ❤️ Love Story -->
+<div class="section">
+  <h2>Our Story</h2>
+  <p>
+    Two hearts, two souls, one beautiful journey. <br><br>
+    What started as an arranged bond blossomed into a deep love, filled with trust, respect, and endless smiles.  
+    With the blessings of our families and divine grace, our love story continues forever. ❤️
+  </p>
+</div>
+
+<!-- 📅 Details -->
+<div class="section">
+  <h2>Wedding Details</h2>
+  <p>
+    📅 07 May 2026 <br>
+    📍 Sahasra Convention Hall, Bheemgal, Nizamabad
+  </p>
+</div>
+
+<!-- 📸 Gallery -->
+<div class="section gallery">
+  <h2>Our Moments</h2>
+  <img src="ss.jpeg">
+  <img src="sanju wedding.jpeg">
+</div>
+
+<!-- 📍 Map -->
+<div class="section">
+  <h2>Location</h2>
+  <a class="btn" href="https://maps.app.goo.gl/4FKYFBhDBKA98xGT9" target="_blank">
+    View on Google Maps
+  </a>
+</div>
+
+<script>
+function openDoor() {
+  document.getElementById("doorScreen").classList.add("open");
+  setTimeout(() => {
+    document.getElementById("doorScreen").style.display = "none";
+  }, 1500);
+}
+
+/* Scroll Animation */
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
