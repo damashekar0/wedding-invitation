@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sanjeev & Vamika | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0b0a08;
+color:white;
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+scroll-behavior:smooth;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 30%,rgba(255,215,0,.12),transparent 25%),
+radial-gradient(circle at 80% 60%,rgba(255,215,0,.08),transparent 30%);
+z-index:-1;
+}
+
+/* INTRO */
+#intro{
+height:100vh;
+position:fixed;
+width:100%;
+z-index:99;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+url('ss1.jpeg') center/cover;
+animation:fadeAway 2s ease 5s forwards;
+}
+
+.om{
+font-size:60px;
+color:gold;
+animation:pulse 3s infinite;
+}
+
+.mantra{
+font-family:Cinzel,serif;
+font-size:30px;
+letter-spacing:3px;
+margin-top:15px;
+color:#f7d778;
+}
+
+.sub{
+margin-top:18px;
+opacity:.85;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.08);
+}
+}
+
+@keyframes fadeAway{
+to{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:
+linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.15)),
+url('ss1.jpeg') center/cover fixed;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:center;
+padding-bottom:13vh;
+text-align:center;
+}
+
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:82px;
+text-shadow:0 0 20px rgba(0,0,0,.8);
+animation:rise 2s ease;
+}
+
+.hero p{
+font-family:Cinzel,serif;
+letter-spacing:4px;
+margin-top:10px;
+color:#f5d77c;
+}
+
+@keyframes rise{
+from{
+opacity:0;
+transform:translateY(60px);
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+
+/* SECTION */
+.section{
+padding:100px 25px;
+max-width:900px;
+margin:auto;
+text-align:center;
+opacity:0;
+transform:translateY(60px);
+transition:1.2s;
+}
+
+.section.show{
+opacity:1;
+transform:none;
+}
+
+.section h2{
+font-family:Cinzel,serif;
+color:gold;
+font-size:38px;
+margin-bottom:30px;
+}
+
+.story{
+line-height:2;
+font-size:19px;
+max-width:700px;
+margin:auto;
+}
+
+.quote{
+font-family:'Great Vibes',cursive;
+font-size:56px;
+color:#f5d67d;
+margin:30px 0;
+}
+
+.card{
+border:1px solid rgba(255,215,0,.35);
+padding:38px;
+border-radius:22px;
+background:rgba(255,255,255,.03);
+backdrop-filter:blur(8px);
+line-height:2;
+}
+
+/* COUNTDOWN */
+.count-box{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.box{
+width:130px;
+height:130px;
+border:2px solid gold;
+border-radius:18px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:rgba(255,255,255,.04);
+box-shadow:0 0 20px rgba(255,215,0,.15);
+}
+
+.box span{
+font-size:42px;
+font-family:Cinzel,serif;
+font-weight:bold;
+color:#ffd96f;
+}
+
+.box label{
+margin-top:10px;
+letter-spacing:2px;
+}
+
+/* GALLERY */
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:24px;
+margin-top:30px;
+}
+
+.gallery img{
+width:340px;
+max-width:90%;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.6s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+background:linear-gradient(45deg,#caa63a,#ffde7d);
+color:#111;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+}
+
+.footer{
+padding:90px 20px;
+text-align:center;
+font-family:'Great Vibes',cursive;
+font-size:54px;
+color:gold;
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- INTRO -->
+<section id="intro">
+<div class="om">🕉</div>
+
+<div class="mantra">
+Om Ganeshaya Namaha
+</div>
+
+<div class="sub">
+With divine blessings, we invite you to our sacred union
+</div>
+</section>
+
+
+
+<!-- HERO -->
+<section class="hero">
+<h1>Sanjeev & Vamika</h1>
+<p>TOGETHER FOREVER</p>
+</section>
+
+
+
+<!-- STORY -->
+<section class="section reveal">
+
+<h2>Our Story</h2>
+
+<div class="quote">
+“An arranged beginning… a beautiful love story.”
+</div>
+
+<div class="story">
+What began through family blessings grew into friendship,
+blossomed into love,
+and now becomes a lifelong promise.
+Two souls, one sacred journey.
+</div>
+
+</section>
+
+
+
+<!-- INVITATION -->
+<section class="section reveal">
+
+<h2>Wedding Invitation</h2>
+
+<div class="card">
+
+We request the honor of your gracious presence  
+to celebrate the wedding of
+
+<br><br>
+
+<b>Sanjeev Uradi</b>
+<br>&<br>
+<b>Vamika Jadala</b>
+
+<br><br>
+
+07 May 2026  
+<br>
+Muhurtham: 9:00 AM
+
+<br><br>
+
+Sahasra Convention Hall  
+<br>
+Bheemgal, Nizamabad
+
+</div>
+
+</section>
+
+
+
+<!-- COUNTDOWN -->
+<section class="section reveal">
+
+<h2>Countdown To Our Wedding</h2>
+
+<div class="count-box">
+
+<div class="box">
+<span id="days">0</span>
+<label>Days</label>
+</div>
+
+<div class="box">
+<span id="hours">0</span>
+<label>Hours</label>
+</div>
+
+<div class="box">
+<span id="mins">0</span>
+<label>Minutes</label>
+</div>
+
+</div>
+
+<br>
+
+<p>
+Muhurtham: 9:00 AM • 07 May 2026
+</p>
+
+</section>
+
+
+
+<!-- GALLERY -->
+<section class="section reveal">
+
+<h2>Our Moments</h2>
+
+<div class="gallery">
+<img src="ss.jpeg">
+<img src="sanju wedding.jpeg">
+</div>
+
+</section>
+
+
+
+<!-- VENUE -->
+<section class="section reveal">
+
+<h2>Venue</h2>
+
+<div class="card">
+
+📅 07 May 2026
+
+<br><br>
+
+🕘 9:00 AM
+
+<br><br>
+
+📍 Sahasra Convention Hall  
+Bheemgal, Nizamabad
+
+<br><br>
+
+We warmly welcome you to bless our union.
+
+<a class="btn"
+href="https://maps.app.goo.gl/4FKYFBhDBKA98xGT9"
+target="_blank">
+View Location
+</a>
+
+</div>
+
+</section>
+
+
+
+<div class="footer">
+We Await Your Blessings
+</div>
+
+
+<script>
+
+/* Scroll Animation */
+const reveals=document.querySelectorAll('.reveal');
+
+function animateReveal(){
+reveals.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+}
+
+window.addEventListener('scroll',animateReveal);
+animateReveal();
+
+
+/* Countdown */
+const weddingDate=
+new Date("May 07, 2026 09:00:00").getTime();
+
+setInterval(function(){
+
+let now=
+new Date().getTime();
+
+let distance=
+weddingDate-now;
+
+let days=Math.floor(
+distance/(1000*60*60*24)
+);
+
+let hours=Math.floor(
+(distance%(1000*60*60*24))/
+(1000*60*60)
+);
+
+let mins=Math.floor(
+(distance%(1000*60*60))/
+(1000*60)
+);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("mins").innerHTML=mins;
+
+},1000);
+
+</script>
+
+</body>
+</html>
